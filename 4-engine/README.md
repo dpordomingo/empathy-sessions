@@ -429,14 +429,14 @@ I was able to run https://github.com/src-d/gitbase-spark-connector against engin
 ```shell
 $ srcd ini
 $ srcd sql "select *"
-$ docker run --rm
-  --publish 8080:8080
-  --env BBLFSH_HOST=bblfshd
-  --env BBLFSH_PORT=9432
-  --env GITBASE_SERVERS=gitbase:3306
-  --link srcd-cli-bblfshd:bblfshd
-  --link srcd-cli-gitbase:gitbase
-  --name=spark
+$ docker run --rm \
+  --publish 8080:8080 \
+  --env BBLFSH_HOST=bblfshd \
+  --env BBLFSH_PORT=9432 \
+  --env GITBASE_SERVERS=gitbase:3306 \
+  --link srcd-cli-bblfshd:bblfshd \
+  --link srcd-cli-gitbase:gitbase \
+  --name=spark \
   srcd/gitbase-spark-connector-jupyter:latest
 ```
 
